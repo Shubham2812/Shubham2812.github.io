@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Education </title>
+	<style type="text/css">
+		.main{
+			background-color: #ffcc66;
+			border: 1px solid black;
+			border-radius: 60%;
+			height: 550px;
+			padding: 40px;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		.content{
+			display: flex;
+			justify-content: space-between;
+			width: 90%;
+		}
+
+		.right{
+			width: 100%;
+			margin-left: 20px;
+		}
+
+		.links{
+			width: 250px;
+			display: flex;
+			justify-content: space-between;
+			padding: 10px;
+			border: 1px solid #ffcc66;
+		}
+
+		.topic{
+			height: 100px;
+			width: 200px;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		img{
+			height: 280px;
+			width: 300px;
+		}
+
+		a{
+			text-decoration: none;
+			color: orange;
+		}
+
+		a:hover{
+			color: red;
+		}
+
+		.left{
+			height: 300px;
+			width: 20%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			border: 1px solid red;
+			background-color: white;
+		}
+
+		.right{
+			height: 260px;
+			width: 80%;
+			border: 1px solid red;
+			background-color: white;
+			padding: 20px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="topic">
+			<span style="font-size: 50px; color: black"> Education </span>
+		</div>
+		<div class="content">
+			<div class="left">
+				<span id="school" style="font-size: 30px; color: brown; border: 1px solid brown; padding: 5px; padding-right: 15px; padding-left: 15px;">
+					Schooling
+				</span>
+				<span id="college" style="font-size: 30px; color: brown; border: 1px solid brown; padding: 5px;">
+					Graduation
+				</span>
+			</div>
+			<div class="right">
+				<p id="content1" style="font-size: 30px; color: blue;"></p>
+				<p id="content2" style="font-size: 20px; color: blue;"></p>
+				<p id="content3" style="font-size: 20px; color: blue;"></p>
+				<p id="content4" style="font-size: 20px; color: blue;"></p>
+			</div>
+		</div>
+		<div class="links">
+			<a href="http://www.rosaryschool.in/"><img src="http://www.rosarychurchschool.com/images/About-school1.jpg" title="Rosary" style="height: 100px; width: 100px; border-radius: 80%"></a>
+			<a href="http://dtu.ac.in/"><img src="http://schoolbook.getmyuni.com/assets/images/rev_img/14035__7625/145724721825-delhitechnologicaluniversity.jpg" title="DTU" style="height: 100px; width: 100px; border-radius: 80%"></a>
+		</div>
+	</div>
+	<div>
+		<a href="file:///home/shubham/Web_Developement/Javascript/CV.html"> Go Back </a>
+	</div>
+
+	<script type="text/javascript">
+		var school = document.getElementById("school");
+		var college = document.getElementById("college");
+		var p1 = document.getElementById("content1");
+		var p2 = document.getElementById("content2");
+		var p3 = document.getElementById("content3");
+		var p4 = document.getElementById("content4");
+
+		school.addEventListener("click", func1);
+		college.addEventListener("click", func2);
+
+		function func1()
+		{ p1.innerHTML = "<span style='color:#3385ff'> Institution: </span> Rosary Senior Secondary School";
+		  p2.innerHTML = "<span style='color:#3385ff'> Stream: </span> Science";
+		  p3.innerHTML = "<span style='color:#3385ff'> Specialisation: </span> Computer Science"
+		  p4.innerHTML = "<span style='color:#3385ff'> Passing Year: </span> 2015"
+		}
+
+		function func2()
+		{ p1.innerHTML = "<span style='color:#3385ff'> Institution: </span> Delhi Technological University";
+		  p2.innerHTML = "<span style='color:#3385ff'> Course: </span> B.Tech";
+		  p3.innerHTML = "<span style='color:#3385ff'> Branch: </span> Information Technology"
+		  p4.innerHTML = "<span style='color:#3385ff'> Graduation Year: </span> 2019"
+		}
+
+	</script>
+</body>
+</html>
+
