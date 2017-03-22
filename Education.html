@@ -84,10 +84,13 @@
 		</div>
 		<div class="content">
 			<div class="left">
-				<span id="school" style="font-size: 30px; color: brown; border: 1px solid brown; padding: 5px; padding-right: 15px; padding-left: 15px;">
-					Schooling
+				<span id="primary_school" style="font-size: 20px; color: brown; border: 1px solid brown; padding: 5px; padding-right: 15px; padding-left: 15px; width: 150px; text-align: center;">
+					Secondary School
 				</span>
-				<span id="college" style="font-size: 30px; color: brown; border: 1px solid brown; padding: 5px;">
+				<span id="secondary_school" style="font-size: 20px; color: brown; border: 1px solid brown; padding: 5px; padding-right: 15px; padding-left: 15px; width: 150px; text-align: center;">
+					Senior Secondary
+				</span>
+				<span id="college" style="font-size: 20px; color: brown; border: 1px solid brown; padding: 5px; width: 170px; text-align: center;">
 					Graduation
 				</span>
 			</div>
@@ -96,6 +99,7 @@
 				<p id="content2" style="font-size: 20px; color: blue;"></p>
 				<p id="content3" style="font-size: 20px; color: blue;"></p>
 				<p id="content4" style="font-size: 20px; color: blue;"></p>
+				<p id="content5" style="font-size: 20px; color: blue;"></p>
 			</div>
 		</div>
 		<div class="links">
@@ -108,28 +112,50 @@
 	</div>
 
 	<script type="text/javascript">
-		var school = document.getElementById("school");
+		var primary_school = document.getElementById("primary_school");
+		var secondary_school = document.getElementById("secondary_school");
 		var college = document.getElementById("college");
 		var p1 = document.getElementById("content1");
 		var p2 = document.getElementById("content2");
 		var p3 = document.getElementById("content3");
 		var p4 = document.getElementById("content4");
+		var p5 = document.getElementById("content5");
 
-		school.addEventListener("click", func1);
-		college.addEventListener("click", func2);
+		primary_school.addEventListener("click", func1);
+		secondary_school.addEventListener("click", func2);
+		college.addEventListener("click", func3);
 
 		function func1()
 		{ p1.innerHTML = "<span style='color:#3385ff'> Institution: </span> Rosary Senior Secondary School";
-		  p2.innerHTML = "<span style='color:#3385ff'> Stream: </span> Science";
-		  p3.innerHTML = "<span style='color:#3385ff'> Specialisation: </span> Computer Science"
-		  p4.innerHTML = "<span style='color:#3385ff'> Passing Year: </span> 2015"
+		  p2.innerHTML = "<span style='color:#3385ff'> Class 10: </span>  9.8 CGPA ";
+		  p3.innerHTML = "<span style='color:#3385ff'> Board: </span> Central Board of Secondary Education"
+		  p4.innerHTML = "<span style='color:#3385ff'> Passing Year: </span> 2013"
+		  p5.innerHTML = ""
+		  primary_school.style.backgroundColor = "orange"
+		  secondary_school.style.backgroundColor = "white"
+		  college.style.backgroundColor = "white"
 		}
 
 		function func2()
+		{ p1.innerHTML = "<span style='color:#3385ff'> Institution: </span> Rosary Senior Secondary School";
+		  p2.innerHTML = "<span style='color:#3385ff'> Stream: </span> Science";
+		  p3.innerHTML = "<span style='color:#3385ff'> Percentage: </span> 96.4%"
+		  p4.innerHTML = "<span style='color:#3385ff'> Passing Year: </span> 2015"
+		  p5.innerHTML = "<span style='color:#3385ff'> Specialisation: </span> Computer Science"
+		  primary_school.style.backgroundColor = "white"
+		  secondary_school.style.backgroundColor = "orange"
+		  college.style.backgroundColor = "white"
+		}
+
+		function func3()
 		{ p1.innerHTML = "<span style='color:#3385ff'> Institution: </span> Delhi Technological University";
 		  p2.innerHTML = "<span style='color:#3385ff'> Course: </span> B.Tech";
 		  p3.innerHTML = "<span style='color:#3385ff'> Branch: </span> Information Technology"
 		  p4.innerHTML = "<span style='color:#3385ff'> Graduation Year: </span> 2019"
+		  p5.innerHTML = "<span style='color:#3385ff'> Year: </span> 2nd"
+		  primary_school.style.backgroundColor = "white"
+		  secondary_school.style.backgroundColor = "white"
+		  college.style.backgroundColor = "orange"
 		}
 
 	</script>
