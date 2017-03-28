@@ -7,7 +7,7 @@
 			background-color: cyan;
 			border: 1px solid black;
 			border-radius: 60%;
-			height: 550px;
+			height: 530px;
 			padding: 40px;
 			display: flex;
 			justify-content: space-around;
@@ -29,11 +29,85 @@
 			color: red;
 		}
 
+		.center{
+			height: 400px; 
+			width: 600px;
+			border: 1px solid grey;
+			background-color: white;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		.text{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			height: 60px;
+		}
+
+		.text1, .text2{
+			font-size: 25px;
+			color: brown;
+		}
+
+		#game_2048{
+			height: 240px;
+			width: 140px;
+		}
+
+		#airHockey{
+			height: 250px;
+			width: 350px;
+		}
+
+		.games{
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		.holder1, .holder2{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: 300px;
+			border: 1px solid grey;
+			padding: 10px;
+		}
+
+		.holder1{
+			width: 30%;
+		}
+
+		.holder2{
+			width: 60%;
+		}
+
 	</style>
 </head>
 <body>
 	<div class="main">
 		<h1> Experience </h1>
+		<div class="center">
+			<div class="text">
+				<div class="text1"> Getting Bored? </div>
+				<div class="text2"> Try Out Some Cool Games.. :) </div>
+			</div>
+			<div class="games">
+				<div class="holder1">
+					<span> 2048 </span>
+					<a href="Game_2048.html"><img id="game_2048" src="https://www.dropbox.com/s/zx4qpzac1rbswei/Game_2048.png?dl=1"></a>
+				</div>
+				<div class="holder2">
+					<span> Air Hockey </span>
+					<a href="Game_AirHockey.html"><img id="airHockey" src="https://www.dropbox.com/s/iwcvbgydcurr7lf/AirHockey.png?dl=1"></a>
+				</div>
+			</div>
+		</div>
 		<span style="font-size: 50px; color: brown"> Still Gaining! </span>
 	</div>
 	<div>

@@ -2,12 +2,13 @@
 <html>
 <head>
 	<title> Skills </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<style type="text/css">
 		.main{
 			background-color: cyan;
 			border: 1px solid black;
 			border-radius: 60%;
-			height: 550px;
+			height: 530px;
 			padding: 40px;
 			display: flex;
 			justify-content: space-around;
@@ -29,14 +30,82 @@
 			color: red;
 		}
 
+		#ruby, #css, #cpp, #html, #rails, #javascript{
+			height: 90px;
+			width: 290px;
+			border: 1px solid brown;
+			position: fixed;
+			border-radius: 5%;
+			background-color: #F6FD61;
+			padding: 5px;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			color: #5E1302;
+		} 
+
+		#ruby{
+			top: 100px;
+			left: 120px;
+		}
+
+		#css{
+			top: 5px;
+			left: 500px;
+		}
+
+		#cpp{
+			top: 100px;
+			left: 870px;
+		}
+
+		#html{
+			top: 420px;
+			left: 870px;
+		}
+
+		#rails{
+			top: 530px;
+			left: 500px;
+		}
+
+		#javascript{
+			top: 420px;
+			left: 120px;
+		}
+
+		#skills:hover{
+			cursor: pointer;
+		}
 	</style>
 </head>
 <body>
 	<div class="main">
-		<img src="images/Skills.png" style="height: 500px; width: 500px; border-radius: 30%">
+		<div id="ruby"> <p> I've Made some Basic games like Tic-Tac-Toe in ruby and seem to have a basic control over the language. I've also worked with Sinatra to make basix Web Applications! </p> </div>
+		<div id="css"> <p> Made some cool responsive websites and elite website designs. Also worked with Bootstrap and managed to give proper layout and orientations to my Web Apps. </p> </div>
+		<div id="cpp"> <p> I have developed all my knowledge and understanding of Data Structures and Algorithms in C and C++! I have a good command over the language and did quite a lot of coding in C++ </p>  </div>
+		<div id="html"> <p> Worked quite a lot with HTML5 and in some proportions in earlier versions of HMTL. I also have a basic idea of XML and other client side languages. </p> </div>
+		<div id="rails"> <p> Developed some Powerful Web Applications in the Rails Framework. I have the ability to manage both Frontend and Backend and gave good Database management Skills! </p> </div>
+		<div id="javascript"> <p> Worked quite alot with Javascript and know the basic uses and applcations of AJAX! Also having knowledge of Jquery and JSON APIs systems. </p> </div>
+
+		<img id="skills" src="images/Skills.png" style="height: 400px; width: 400px; border-radius: 30%">
 	</div>
 	<div>
 		<a href="index.html"> Go Back </a>
 	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#skills").click(function(){
+				$("#ruby").fadeToggle(400);
+				$("#css").fadeToggle(700);
+				$("#cpp").fadeToggle(1000);
+				$("#html").fadeToggle(1300);
+				$("#rails").fadeToggle(1600);
+				$("#javascript").fadeToggle(1900);
+				console.log("hello")	
+			});
+		})
+	</script>
 </body>
 </html>
