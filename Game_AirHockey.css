@@ -11,6 +11,14 @@
 			background-size: 1000px 550px;
 	}
 
+	#icon{
+		position: fixed;
+		height: 100px;
+		width: 100px;
+		top: 20px;
+		left: 20px;
+	}
+
 	#leftHockey{
 		height: 120px;
 		width: 30px;
@@ -93,11 +101,11 @@
 	#begin, #stop{
 		position: fixed;
 		padding: 10px;
-		background-color: cyan;
+		background-color: #97FD0C;
 		border: 1px solid blue;
 		top: 150px;
 		font-size: 20px;
-		color: blue;
+		color: darkgreen;
 		border-radius: 10%;
 	}
 
@@ -130,7 +138,66 @@
 	.credits{
 		position: fixed;
 		top: 600px;
-		left: 530px;
+		left: 1000px;
 		color: green;
 		font-size: 20px;
+	}
+
+	.controls_left, .controls_right{
+		position: fixed;
+		border: 1px solid grey;
+		padding: 10px;
+		height: 120px;
+		width: 100px;
+		top: 400px;
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		align-items: center;
+		color: darkgreen;
+	}
+
+	.controls_left{
+		left: 20px;
+	}
+
+	.controls_left > span{
+		font-size: 20px;
+		color: black;
+	}
+
+	.controls_left > p{
+		font-size: 15px;
+		border: 1px solid green;
+		padding: 2px;
+	}
+
+	.controls_right{
+		left: 1160px;
+	}
+
+	.controls_right > span{
+		font-size: 20px;
+		color: black;
+	}
+
+	.controls_right > p{
+		font-size: 15px;
+		border: 1px solid green;
+		padding: 2px;
+	}
+
+	.instructions{
+		position: fixed;
+		top: 590px;
+		left: 20px;
+		height: 50px;
+		width: 600px;
+		border: 1px solid grey;
+		padding: 3px;
+		color: darkgreen;
+	}
+
+	.instructions > span{
+		color: black;
 	}

@@ -1,12 +1,16 @@
-
 var id;
 var x;
 var y;
 var speed = 120;
 var lengthBar = 120;
+var upperLimit = 420;
+var lowerLimit = 80;
+var score = 0;
 
 $(document).ready(function(){
 	console.log("Begin");
+	document.getElementById("scoreValue").innerHTML = score;
+
 	$(window).keydown(function(event){
 		// console.log(event);
 		if(event.keyCode == 40)
@@ -37,7 +41,7 @@ $(document).ready(function(){
 
 	$("#medium").click(function(){
 		console.log("medium");
-		speed = 80;
+		speed = 90;
 		clearInterval(id);
 		id = setInterval(move, speed)
 	})
@@ -52,6 +56,7 @@ $(document).ready(function(){
 	$("#amatuer").click(function(){
 		console.log("ama");
 		lengthBar = 120;
+		upperLimit = 420;
 		$("#leftHockey").height(120);
 		$("#rightHockey").height(120);
 		clearInterval(id);
@@ -61,6 +66,7 @@ $(document).ready(function(){
 	$("#pro").click(function(){
 		console.log("pro");
 		lengthBar = 80;
+		upperLimit = 460;		
 		$("#leftHockey").height(80);
 		$("#rightHockey").height(80);
 		clearInterval(id);
@@ -70,6 +76,7 @@ $(document).ready(function(){
 	$("#ninja").click(function(){
 		console.log("ninja");
 		lengthBar = 50;
+		upperLimit = 490;
 		$("#leftHockey").height(50);
 		$("#rightHockey").height(50);
 		clearInterval(id);
@@ -80,7 +87,7 @@ $(document).ready(function(){
 
 
 	$("#begin").click(start);
-	$("#stop").click(stop);
+	$("#stop").click(reset);
 
 
 })
@@ -89,7 +96,7 @@ function moveRightDown()
 {
 	var righttHockey = document.getElementById("rightHockey")
 	var distance = getOffset(righttHockey).top;
-	if(distance < 420)
+	if(distance < upperLimit)
 	distance += 10;
 	righttHockey.style.top = distance + "px";
 }
@@ -98,7 +105,7 @@ function moveRightUp()
 {
 	var righttHockey = document.getElementById("rightHockey")
 	var distance = getOffset(righttHockey).top;
-	if(distance > 80)
+	if(distance > lowerLimit)
 	distance -= 10;
 	righttHockey.style.top = distance + "px";
 }
@@ -107,7 +114,7 @@ function moveLeftDown()
 {
 	var leftHockey = document.getElementById("leftHockey")
 	var distance = getOffset(leftHockey).top;
-	if(distance < 420)
+	if(distance < upperLimit)
 	distance += 10;
 	//console.log(leftHockey.style);
 	leftHockey.style.top = distance + "px";
@@ -118,7 +125,7 @@ function moveLeftUp()
 	
 	var leftHockey = document.getElementById("leftHockey")
 	var distance = getOffset(leftHockey).top;
-	if(distance > 80)
+	if(distance > lowerLimit)
 	distance -= 10;
 	//console.log(leftHockey.style);
 	leftHockey.style.top = distance + "px";
@@ -138,6 +145,7 @@ function getOffset( el ) {
 function start()
 {
 	//console.log($("#ball"));
+	document.getElementById("scoreValue").innerHTML = score;
 	var random = Math.floor(Math.random() * 4)
 	if(random == 0)
 	{ y = 10;
@@ -159,13 +167,15 @@ function start()
 	id = setInterval(move, speed);
 }
 
-	var topLimit = 60;
-	var bottomLimit = 500;
-	var leftLimit = 160;
-	var rightLimit = 1080;
+var topLimit = 60;
+var bottomLimit = 500;
+var leftLimit = 160;
+var rightLimit = 1080;
 
 function stop(){
 	clearInterval(id);
+	ball.style.top = '280px';
+	ball.style.left = '625px';
 }
 
 function move()
@@ -179,12 +189,14 @@ function move()
 
 	if(collisionLeft() == true)
 	{	x = -10;
-		document.getElementById("scoreValue").innerHTML *= 2;
+		score += 10;
+		document.getElementById("scoreValue").innerHTML = score;
 		
 	}
 	if(collisionRight() == true)
 	{	x = 10;
-		document.getElementById("scoreValue").innerHTML *= 2;
+		score += 10;
+		document.getElementById("scoreValue").innerHTML = score;
 	}
 	
 	if(getOffset(ball).top < topLimit)
@@ -238,7 +250,14 @@ function collisionRight()
 function reset()
 {
 	clearInterval(id);
-	document.getElementById("scoreValue").innerHTML = 0;
+	ball.style.top = '280px';
+	ball.style.left = '630px';
+	document.getElementById("rightHockey").style.top = '240px'
+	document.getElementById("leftHockey").style.top = '240px'
+	score = 0;
+	x = 0;
+	y = 0;
+	document.getElementById("scoreValue").innerHTML = score;
 	console.log("end");
 }
 
