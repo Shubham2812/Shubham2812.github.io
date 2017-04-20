@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Curriculum Vitae </title>
+	<script type="text/javascript" src="interactive.js"></script>
+	<link rel="stylesheet" type="text/css" href="interactive.css">
+</head>
+<body>
+
+<div class="options">
+	<div class="feild" id="feild1"> <span> About </span> </div>
+	<div class="feild" id="feild2"> <span> Projects </span> </div>
+	<div class="feild" id="feild3"> <span> Education </span> </div>
+	<div class="feild" id="feild4"> <span> Skills </span> </div>
+	<div class="feild" id="feild5"> <span> Contact </span> </div>
+</div>
+
+<img id="bullet" src="images/bullet1.jpg">
+<img id="upper" src="images/rocket1.png">
+
+<div class="control">
+	<div style="display: flex; justify-content: space-between; width: 42%;">
+		<div>
+			<img id="bottomL" src="images/arrow_left.png" title="Move Left">
+			<img id="bottomR" src="images/arrow_right.png" title="Move Right"> 
+		</div>
+		<div style="width: 410px; border: 1px solid grey; padding-left: 10px; padding-right: 10px; padding-top: 5px; color: brown; display: flex; flex-direction: column; align-items: center; justify-content: space-between;"">
+			<span> Use Keyboard Arrow Keys <-- and --> </span> 
+			<span> to move the Rocket Accordingly! </span>
+		</div>
+	</div>
+	<div style="display: flex; align-items: center;">
+		<div style="width: 255px; height: 40px; margin-right: 30px; border: 1px solid grey; display: flex; justify-content: space-around;align-items: center;">
+			<span style="color: brown"> Press the Top Arrow Key to Shoot! </span>
+		</div>
+		<div id="inventory">
+			<div> <img id="inventory1" src="images/bullet1.jpg"> </div>
+			<div> <img id="inventory2" src="images/bullet1.jpg"> </div>
+			<div> <img id="inventory3" src="images/bullet1.jpg"> </div>
+			<div> <img id="inventory4" src="images/bullet1.jpg"> </div>
+			<div> <img id="inventory5" src="images/bullet1.jpg"></div>
+		</div>
+		<img id="reload" src="images/reload.png" title="Reload">
+		<img id="fire" src="images/shoot.png" title="Fire">
+	</div>
+</div>
+<div class="footer">
+ 	<div class="rockets" title="Select Rocket">
+ 		<img id="rocket1" src="images/rocket1.png" style="height: 40px; width: 25px;">
+ 		<img id="rocket2" src="images/rocket2.png" style="height: 40px; width: 25px;">
+ 		<img id="rocket3"  src="images/rocket3.png" style="height: 40px; width: 25px;">
+ 		<img id="rocket4" src="images/rocket4.jpg" style="height: 40px; width: 25px;">
+ 		<img id="rocket5" src="images/rocket5.jpg" style="height: 40px; width: 25px;">
+	</div>
+
+	<div id="missed">
+		<img src="images/oops.jpg" style="height: 60px; width: 100px;">
+	</div>
+
+ 	<div class="bullets" title="Select Weapon">
+ 		<img id="bullet1" src="images/bullet1.jpg" style="height: 40px; width: 25px;">
+ 		<img id="bullet2" src="images/bullet2.jpg" style="height: 40px; width: 25px;">
+ 		<img id="bullet3" src="images/bullet3.png" style="height: 40px; width: 25px;">
+ 		<img id="bullet4" src="images/bullet4.png" style="height: 40px; width: 25px;">
+ 		<img id="bullet5" src="images/bullet5.jpg" style="height: 40px; width: 25px;">
+ 	</div>
+
+</div>
+</body>
+</html>

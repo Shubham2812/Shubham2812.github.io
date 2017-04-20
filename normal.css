@@ -1,0 +1,260 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.head{
+	background-image: url('images/programmer.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 200px;
+	height: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	margin-bottom: 2px;
+}
+
+
+.head > div{
+	height: 120px;
+	width: 120px;
+	border: 8px solid #232328;
+	border-radius: 50%;
+	background-color: white;
+	margin-top: 100px;
+}
+
+.head > div > img{
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+}
+
+.head_content{
+	border: 1px solid grey;
+	margin: 10px;
+	display: flex;
+}
+
+.name{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.main{
+	background-color: #232328;
+	display: flex;
+	justify-content: space-around;
+	padding: 10px;	
+	height: 490px;  	
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 5px;
+}
+
+.one, .four{
+	width: 25%;
+}
+
+.two, .three{
+	width: 20%;
+	margin-top: 50px;
+}
+.biography_head, .education_head, .skills_head, .abilities_head, .contact_head, .projects_head, .passion_head{
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid white;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+.biography_content > div{
+	display: flex;
+	justify-content: space-between;
+}
+
+.biography_head > img, .education_head > img, .skills_head > img, .abilities_head > img, .contact_head > img, .projects_head > img, .passion_head > img{
+	height: 40px;
+	width: 40px;
+}
+
+.biography_head > span, .education_head > span, .skills_head > span, .abilities_head > span, .contact_head > span, .projects_head > span, .passion_head > span{
+	font-size: 20px;
+	color: white;
+	margin-left: 10px;
+}
+
+.biography_content, .education_content, .skills_content. .contact_content{
+	display: flex;
+	flex-direction: column;
+}
+
+.skills_content > div{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 10px;
+}
+
+.skills_content > div > div{
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.skills_content > div > div >img{
+	height: 50px;
+	width: 50px;
+}
+
+.biography, .education{
+}
+
+.field{
+	color: #e9bd23;
+}
+
+.value{
+	color: #ddddde; /* #7b7c7f */
+}
+
+.special_field{
+	color: #ddddde;
+}
+
+legend{
+	color: white;
+}
+
+.scale{
+	height: 5px;
+	border: 1px solid grey;
+	background-color: white;
+}
+
+.abilities_content > div{
+	margin-bottom: 10px;
+}
+
+.abilities_frontend > div > div{
+	background-color: #eabe24;
+	width: 40%;
+	height: 5px;
+}
+
+.abilities_backend > div > div{
+	background-color: #eabe24;
+	width: 80%;
+	height: 5px;
+}
+
+.abilities_ds > div > div{
+	background-color: #eabe24;
+	width: 60%;
+	height: 5px;
+}
+
+.abilities_coding > div > div{
+	background-color: #eabe24;
+	width: 30%;
+	height: 5px;
+}
+
+.contact_content > div{
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+}
+
+.home{
+	height: 26px; 
+	width: 28px;
+}
+
+.special_link > a{
+	color: #7b7c7f;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+.value > a{
+	color: #7b7c7f;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+a:hover{
+	color: white;
+	cursor: pointer;
+}
+
+.education_value{
+	font-size: 15px;
+	color: #ddddde;
+}
+
+.education_school > div, .education_college > div{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;	
+}
+
+fieldset{
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+.description{
+	font-size: 13px;
+	color: grey
+}
+
+.two > img{
+	height: 120px;
+	width: 100%;
+}
+
+.one > div > div{
+	margin-bottom: 10px;
+}
+
+.passion_content{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: grey;
+}
+
+.passion_content > div{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 70px;
+}
+
+.swimming, .movies, .food{
+	height: 30px;
+	width: 30px;
+}
+
+.swimming{
+	margin-left: 3px;
+}
+
+.music{
+	height: 35px;
+	width: 35px;
+}
+
+.movies{
+	border-radius: 50%;
+}

@@ -1,0 +1,136 @@
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+
+		#upper{
+			position: absolute;
+			left: 600px;
+			top: 400px;
+			height: 120px; 
+			width: 60px;
+		}
+
+		#bullet{
+			position: absolute;
+			left: 610px;
+			top: 360px;
+			height: 40px;
+			display: none;
+			
+		}
+
+		.control{
+			margin-top: 400px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 10px; 			
+		}
+
+		#bottomR{
+			height: 40px; 
+			width: 40px;
+		}
+
+		#bottomL{
+			height: 40px; 
+			width: 40px;
+		}
+
+		#fire{
+			height: 60px; 
+			width: 60px;
+		}
+
+		#reload{
+			height: 50px; 
+			width: 100px;
+		}
+
+		#missed{
+			display: none;
+		}
+
+		.options{
+			margin-top: 20px;
+			height: 100px;
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.feild{
+			height: 60px; 
+			width: 100px;
+			border-radius: 80%;
+			border: 1px solid grey;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			box-shadow: 10px 10px 5px #888888;
+		}
+
+		.footer{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		.rockets{
+			width: 40%;
+			border: 1px solid grey;
+			display: flex;
+			justify-content: space-around;
+			padding: 10px;
+		}
+
+		.bullets{
+			width: 40%;
+			border: 1px solid grey;
+			display: flex;
+			justify-content: space-around;
+			padding: 10px;
+		}
+
+		#feild1{
+			background-color: #ffcc66;			
+		}
+
+		#feild2{
+			background-color: #4dffff;			
+		}
+
+		#feild3{
+			background-color: #33ff33;			
+		}
+
+		#feild4{
+			background-color: #ff80aa;			
+		}
+
+		#feild5{
+			background-color: #ffff1a;			
+		}
+
+		#inventory{
+			height: 40px;
+			width: 80px;
+			border: 1px solid grey;
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+		}
+
+		#inventory1, #inventory2, #inventory3, #inventory4, #inventory5{
+			height: 20px;
+			width: 10px;
+			margin-left: 5px;
+		}
+
+		#inventory1{
+			margin-right: 5px;
+		}

@@ -1,16 +1,13 @@
 var grid;
 var score = 0;
-var flag = true;
+var flag = false;
+var count = 0; 
 
 function main()
 { 
-	console.log("startMain");
-
 	begin();
 	document.addEventListener('keydown', move);
 	$("#newGame").click(begin);
-
-	console.log("endMain");
 }
 
 window.addEventListener('load', function(){
@@ -19,20 +16,20 @@ window.addEventListener('load', function(){
 
 function begin()
 {
-	flag = true;
+	flag = false;
+	count = 0;
 	score = 0;
-	console.log("startBegin");
 	grid = [[' ', ' ', ' ', ' '], [ ' ', ' ', ' ', ' '], [ ' ', ' ', ' ', ' '], [ ' ', ' ', ' ', ' ']];
-	insert();
+
+	insert();	
 	insert();
 	display();
-	console.log("endBegin");
 }
 
 function move(event)
 {
+	count++;
 	flag = false;
-	console.log("startMove");
 	if(event.keyCode == 39)
 	{ moveRight();
 
@@ -49,8 +46,6 @@ function move(event)
 	{ moveDown();
 
 	} 
-	console.log("endMove");
-
 }	
 
 function shift(row, type)
@@ -112,8 +107,6 @@ function shift(row, type)
 
 function moveRight()
 { 
-	console.log("startMoveRight");
-
 	var status = false;
 	for(var i=0; i<4; i++)
 	{ if(status == false)
@@ -128,6 +121,7 @@ function moveRight()
  		  grid[i][j-1] = ' ';
  		  score = score + grid[i][j];
  		  status = shift(i, 'right');
+ 		  status = true;
  		}
  		j--;
 	  }
@@ -137,14 +131,10 @@ function moveRight()
 	insert()
 	
 	display();
-	console.log("endMoveRight");
-
 }
 
 function moveLeft()
 {
-	console.log("startMoveLeft");
-
 	var status = false
 	for(var i=0; i<4; i++)
 	{ if(status == false)
@@ -159,6 +149,7 @@ function moveLeft()
  		  grid[i][j+1] = ' ';
  		  score = score + grid[i][j];
  		  status = shift(i, 'left');
+ 		  status = true;
  		}
  		j++;
 	  }
@@ -168,12 +159,10 @@ function moveLeft()
 	insert()
 	
 	display();
-	console.log("endMoveleft");
 }
 
 function moveUp()
 {
-	console.log("startMoveUp");
 	var status = false
 	for(var i=0; i<4; i++)
 	{ if(status == false)
@@ -188,6 +177,7 @@ function moveUp()
  		  grid[j+1][i] = ' ';
  		  score = score + grid[j][i];
  		  status = shift(i, 'up');
+ 		  status = true;
  		}
  		j++;
 	  }
@@ -197,15 +187,10 @@ function moveUp()
 	insert();
 	
 	display();
-	console.log("endMoveUp");
-
-	
 }
 
 function moveDown()
-{
-	console.log("startMoveDeown");
-	
+{	
 	var status = false
 	for(var i=0; i<4; i++)
 	{ if(status == false)
@@ -220,6 +205,7 @@ function moveDown()
  		  grid[j-1][i] = ' ';
  		  score = score + grid[j][i];
  		  status = shift(i, 'down');
+ 		  status = true;
  		}
  		j--;
 	  }
@@ -229,17 +215,13 @@ function moveDown()
 	insert()
 	
 	display();
-
-	display();
-	console.log("endMoveDown");
-	
+	display();	
 }
 
 function insert()
 {
-	console.log("startInsert");
 	$("#points").html(score);
-	if(flag == true)
+	if(count == 0 || flag == true)
 	{ while(true)
 	  { var row = Math.floor(Math.random() * 4);
 	    var col = Math.floor(Math.random() * 4);
@@ -249,22 +231,19 @@ function insert()
 	    } 
 	  }
 	}
-	else
-		alert("Game Over");
-
-	console.log("endInsert");
-
+	else if(flag == false && count > 0)
+	alert("Game Over");
 }
 
 function display()
 {
-	console.log("startDisplay");
 	for(var i=0; i<=3; i++)
 	{ for(var j=0; j<=3; j++)
 		$("#pos" + i + j).html(grid[i][j]);
-		if(grid[i][j] == 2048)
+		if(grid[i][j] == 128)
 		alert("You Win")	
 	}
+	console.log(flag);
 
 	for(var i=0; i<=3; i++)
 	{ for(var j=0; j<=3; j++)
@@ -308,7 +287,5 @@ function display()
 	  }
 
 	}
-	console.log("endDisplay");
 
 }
-

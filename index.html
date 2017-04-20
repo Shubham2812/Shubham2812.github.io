@@ -1,479 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Curriculum Vitae </title>
+	<title> Home Page </title>
 	<style type="text/css">
 		*{
-			margin: 0px;
-			padding: 0px;
+			margin: 0;
+			padding: 0;
 		}
 
-		#upper{
-			position: absolute;
-			left: 600px;
-			top: 400px;
-			height: 120px; 
-			width: 60px;
-		}
-
-		#bullet{
-			position: absolute;
-			left: 610px;
-			top: 360px;
-			height: 40px;
-			display: none;
-			
-		}
-
-		.control{
-			margin-top: 400px;
+		.main{
 			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			background-color: grey;
+			height: 100vh;
+		}
+
+		.main > div > a > div{
+			display: flex;
+			flex-direction: column;
 			justify-content: space-between;
 			align-items: center;
-			padding-left: 10px;
-			padding-right: 10px;
-			padding-bottom: 10px; 			
 		}
 
-		#bottomR{
-			height: 40px; 
-			width: 40px;
+		.interactive, .normal{
+			height: 400px;
+			width: 400px;
+			border-radius: 10%;
+			border: 1px solid black;
 		}
 
-		#bottomL{
-			height: 40px; 
-			width: 40px;
+		#left, #right{
+			height: 400px;
+			width: 400px;
+			border-radius: 10%;
+			opacity: 0.5
 		}
 
-		#fire{
-			height: 60px; 
-			width: 60px;
+		a{
+			text-decoration: none;
+			color: black;
 		}
 
-		#reload{
-			height: 50px; 
-			width: 100px;
+		a:visited{
+			text-decoration: none;
 		}
 
-		#missed{
-			display: none;
+		a:hover{
+			color: white;
 		}
 
-		.options{
-			margin-top: 20px;
-			height: 100px;
-			display: flex;
-			justify-content: space-around;
+		#left:hover, #right:hover{
+			opacity: 1;
 		}
 
-		.feild{
-			height: 60px; 
-			width: 100px;
-			border-radius: 80%;
-			border: 1px solid grey;
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			box-shadow: 10px 10px 5px #888888;
+		#left_text, #right_text{
+			font-size: 40px;
+			color: black;
 		}
 
-		.footer{
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			padding-left: 10px;
-			padding-right: 10px;
+		#cv{
+			height: 200px;
+			width: 200px;
+			border-radius: 50%;
 		}
-
-		.rockets{
-			width: 40%;
-			border: 1px solid grey;
-			display: flex;
-			justify-content: space-around;
-			padding: 10px;
-		}
-
-		.bullets{
-			width: 40%;
-			border: 1px solid grey;
-			display: flex;
-			justify-content: space-around;
-			padding: 10px;
-		}
-
-		#feild1{
-			background-color: #ffcc66;			
-		}
-
-		#feild2{
-			background-color: #4dffff;			
-		}
-
-		#feild3{
-			background-color: #33ff33;			
-		}
-
-		#feild4{
-			background-color: #ff80aa;			
-		}
-
-		#feild5{
-			background-color: #ffff1a;			
-		}
-
-		#inventory{
-			height: 40px;
-			width: 80px;
-			border: 1px solid grey;
-			display: flex;
-			flex-direction: row-reverse;
-			align-items: center;
-		}
-
-		#inventory1, #inventory2, #inventory3, #inventory4, #inventory5{
-			height: 20px;
-			width: 10px;
-			margin-left: 5px;
-		}
-
-		#inventory1{
-			margin-right: 5px;
-		}
-
 
 	</style>
 </head>
 <body>
-
-<div class="options">
-	<div class="feild" id="feild1"> <span> About </span> </div>
-	<div class="feild" id="feild2"> <span> Experience </span> </div>
-	<div class="feild" id="feild3"> <span> Education </span> </div>
-	<div class="feild" id="feild4"> <span> Skills </span> </div>
-	<div class="feild" id="feild5"> <span> Contact </span> </div>
-</div>
-<img id="bullet" src="http://previews.123rf.com/images/3drenderings/3drenderings1203/3drenderings120300128/12894489-3d-render-of-gun-bullet-Stock-Photo-gun.jpg">
-
-<img id="upper" src="https://www.dropbox.com/s/709fh9ylybgwo6t/Rocket.png?dl=1">
-
-<div class="control">
-	<div style="display: flex; justify-content: space-between; width: 42%;">
+	<div class="main">
+		<div> 
+		<a href="interactive.html">
+			<div>
+				<div class="interactive">  <img id="left" src="images/interactive.png"> </div>			
+				<div id="left_text"> Interactive </div>
+			</div>
+		</a>
+		</div>
+		<img id="cv" src="images/cv.jpg">
 		<div>
-			<img id="bottomL" src="https://www.wpclipart.com/signs_symbol/arrows/arrows_outlined/arrow_outline_red_left.png" title="Move Left">
-			<img id="bottomR" src="https://img.clipartfest.com/c5b846f397610687fc3fd483e84f1d40_red-arrow-transparent-red-arrow-clipart-transparent_338-256.png" title="Move Right"> 
-		</div>
-		<div style="width: 410px; border: 1px solid grey; padding-left: 10px; padding-right: 10px; padding-top: 5px; color: brown; display: flex; flex-direction: column; align-items: center; justify-content: space-between;"">
-			<span> Use Keyboard Arrow Keys <-- and --> </span> 
-			<span> to move the Rocket Accordingly! </span>
+		<a href="normal.html"> 
+			<div>
+				<div class="normal"> <img id="right" src="images/normal.png"> </div>
+				<div id="left_text"> Normal </div>
+			</div>
+		</a>
 		</div>
 	</div>
-	<div style="display: flex; align-items: center;">
-		<div style="width: 255px; height: 40px; margin-right: 30px; border: 1px solid grey; display: flex; justify-content: space-around;align-items: center;">
-			<span style="color: brown"> Press the Top Arrow Key to Shoot! </span>
-		</div>
-		<div id="inventory">
-			<div>
-			<img id="inventory1" src="https://www.dropbox.com/s/709fh9ylybgwo6t/Rocket.png?dl=1">
-			</div>
-			<div>
-			<img id="inventory2" src="https://www.dropbox.com/s/709fh9ylybgwo6t/Rocket.png?dl=1">
-			</div>
-			<div>
-			<img id="inventory3" src="https://www.dropbox.com/s/709fh9ylybgwo6t/Rocket.png?dl=1">
-			</div>
-			<div>
-			<img id="inventory4" src="https://www.dropbox.com/s/709fh9ylybgwo6t/Rocket.png?dl=1">
-			</div>
-			<div>
-			<img id="inventory5" src="https://www.dropbox.com/s/709fh9ylybgwo6t/Rocket.png?dl=1">
-			</div>
-		</div>
-		<img id="reload" src="http://www.mastiff-games.com/data/uploads/logoreload.png" title="Reload">
-		<img id="fire" src="http://gameplayinc.nl/gameplayinc/Fruitle_Tootle_files/Shoot%20button.png" title="Fire">
-	</div>
-</div>
-<div class="footer">
- 	<div class="rockets" title="Select Rocket">
- 		<img id="rocket1" src="https://www.dropbox.com/s/709fh9ylybgwo6t/Rocket.png?dl=1" style="height: 40px; width: 25px;">
-
- 		<img id="rocket2" src="http://www.clipartlord.com/wp-content/uploads/2015/06/rocketship17.png" style="height: 40px; width: 25px;">
-
- 		<img id="rocket3"  src="https://img.clipartfox.com/7060a7484860b8648a994380d7d644fb_-rocketship-clip-art-page-2-clipart-rocket-ship_447-800.png" style="height: 40px; width: 25px;">
-
- 		<img id="rocket4" src="https://s-media-cache-ak0.pinimg.com/564x/33/29/d5/3329d51ef3f0c733201d40288b4aeb81.jpg" style="height: 40px; width: 25px;">
-
- 		<img id="rocket5" src="https://clipartion.com/wp-content/uploads/2016/03/rocket-ship-free.jpg" style="height: 40px; width: 25px;">
-
-	</div>
-	<div id="missed">
-		<img src="http://www.clipartkid.com/images/280/oops-cartoon-oops-face-emoticon-mistake-cartoon-oops-clipart-Tseedy-clipart.jpg" style="height: 60px; width: 100px;">
-	</div>
- 	<div class="bullets" title="Select Weapon">
- 		<img id="bullet1" src="http://previews.123rf.com/images/3drenderings/3drenderings1203/3drenderings120300128/12894489-3d-render-of-gun-bullet-Stock-Photo-gun.jpg" style="height: 40px; width: 25px;">
- 		<img id="bullet2" src="https://townofmountainvillage.com/media/rotary-red-ball.jpg" style="height: 40px; width: 25px;">
- 		<img id="bullet3" src="https://img.clipartfest.com/0081b23003b817de6a5c64e216c9d38a_archery-arrow-clip-art-bow-and-bow-and-arrow-clipart-png_199-199.png" style="height: 40px; width: 25px;">
- 		<img id="bullet4" src="http://images.clipartpanda.com/missile-clipart-rocket-146104_960_720.png" style="height: 40px; width: 25px;">
- 		<img id="bullet5" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT5EGMjHP2GZKfkfUrwD6rZ7M9mJE2RAHNWw41FNG0Vbtj-Nx47" style="height: 40px; width: 25px;">
- 	</div>
-</div>
-
-<script>
- var distance = 600;
- var upper = document.getElementById("upper");
- var bottomL = document.getElementById("bottomL");
- var bottomR = document.getElementById("bottomR");
- var bullet = document.getElementById("bullet");
- var fire = document.getElementById("fire");
-
- var feild1 = document.getElementById("feild1");
- var feild2 = document.getElementById("feild2");
- var feild3 = document.getElementById("feild3");
- var feild4 = document.getElementById("feild4");
- var feild5 = document.getElementById("feild5");
-
- var rocket1 = document.getElementById("rocket1");
- var rocket2 = document.getElementById("rocket2");
- var rocket3 = document.getElementById("rocket3");
- var rocket4 = document.getElementById("rocket4");
- var rocket5 = document.getElementById("rocket5");
-
- rocket1.addEventListener("click", changeRocket1);
- rocket2.addEventListener("click", changeRocket2);
- rocket3.addEventListener("click", changeRocket3);
- rocket4.addEventListener("click", changeRocket4);
- rocket5.addEventListener("click", changeRocket5);
-
- var bullet1 = document.getElementById("bullet1");
- var bullet2 = document.getElementById("bullet2");
- var bullet3 = document.getElementById("bullet3");
- var bullet4 = document.getElementById("bullet4");
- var bullet5 = document.getElementById("bullet5");
-
- bullet1.addEventListener("click", changeBullet1);
- bullet2.addEventListener("click", changeBullet2);
- bullet3.addEventListener("click", changeBullet3);
- bullet4.addEventListener("click", changeBullet4);
- bullet5.addEventListener("click", changeBullet5);
-
- var bulletCount = 5;
- var currentBullet;
- var inventory = document.getElementById("inventory");
- reload.addEventListener("click", refill);
- document.addEventListener('keydown', go);
- function refill()
- { bulletCount = 5;
-   inventory1.style.display = "block";
-   inventory2.style.display = "block";
-   inventory3.style.display = "block";
-   inventory4.style.display = "block";
-   inventory5.style.display = "block";
- }
-
- var rocket1_src = "https://www.dropbox.com/s/709fh9ylybgwo6t/Rocket.png?dl=1";
-
- var rocket2_src = "http://www.clipartlord.com/wp-content/uploads/2015/06/rocketship17.png";
-
- var rocket3_src = "https://img.clipartfox.com/7060a7484860b8648a994380d7d644fb_-rocketship-clip-art-page-2-clipart-rocket-ship_447-800.png";
- var rocket4_src = "https://s-media-cache-ak0.pinimg.com/564x/33/29/d5/3329d51ef3f0c733201d40288b4aeb81.jpg";
- var rocket5_src = "https://clipartion.com/wp-content/uploads/2016/03/rocket-ship-free.jpg";
-
- function changeRocket1()
- { 	upper.src = rocket1_src;
- 	inventory1.src = rocket1_src;
- 	inventory2.src = rocket1_src;
- 	inventory3.src = rocket1_src;
- 	inventory4.src = rocket1_src;
- 	inventory5.src = rocket1_src;
- }
-
- function changeRocket2()
- { upper.src = rocket2_src;
-   inventory1.src = rocket2_src;
-   inventory2.src = rocket2_src;
-   inventory3.src = rocket2_src;
-   inventory4.src = rocket2_src;
-   inventory5.src = rocket2_src;
- }
-
- function changeRocket3()
- { upper.src = rocket3_src;
-   inventory1.src = rocket3_src;
-   inventory2.src = rocket3_src;
-   inventory3.src = rocket3_src;
-   inventory4.src = rocket3_src;
-   inventory5.src = rocket3_src;
- }
- 
- function changeRocket4()
- { upper.src = rocket4_src;
-   inventory1.src = rocket4_src;
-   inventory2.src = rocket4_src;
-   inventory3.src = rocket4_src;
-   inventory4.src = rocket4_src;
-   inventory5.src = rocket4_src;
- }
-
- function changeRocket5()
- { upper.src = rocket5_src;
-   inventory1.src = rocket5_src;
-   inventory2.src = rocket5_src;
-   inventory3.src = rocket5_src;
-   inventory4.src = rocket5_src;
-   inventory5.src = rocket5_src;
- }
-
- function changeBullet1()
- { bullet.src = "http://previews.123rf.com/images/3drenderings/3drenderings1203/3drenderings120300128/12894489-3d-render-of-gun-bullet-Stock-Photo-gun.jpg";
- }
-
- function changeBullet2()
- { bullet.src = "https://townofmountainvillage.com/media/rotary-red-ball.jpg";
- }
-
- function changeBullet3()
- { bullet.src = "https://img.clipartfest.com/0081b23003b817de6a5c64e216c9d38a_archery-arrow-clip-art-bow-and-bow-and-arrow-clipart-png_199-199.png";
- }
-
- function changeBullet4()
- { bullet.src = "http://images.clipartpanda.com/missile-clipart-rocket-146104_960_720.png";
- }
-
- function changeBullet5()
- { bullet.src = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT5EGMjHP2GZKfkfUrwD6rZ7M9mJE2RAHNWw41FNG0Vbtj-Nx47";
- }
-
-bottomR.addEventListener("click", moveR);
-bottomL.addEventListener("click", moveL);
-bottomL.addEventListener("click", write);
-bottomR.addEventListener("click", write);
-fire.addEventListener("click", fireBullet);
-
-function moveR(){
-	document.getElementById("missed").style.display = "none";
-	if(distance < 1240)
-	distance += 20;
-
-    upper.style.left = distance + "px";
-    bullet.style.left = distance + "px";
-    bullet.style.top = "220px";
-    bullet.style.display = "none";
-}
-
-function go(event){
-	document.getElementById("missed").style.display = "none";
-	if(event.key == "ArrowRight")
-	{ if(distance < 1220)
-	  distance += 20;
-	}
-	else if(event.key == "ArrowLeft")
-	{ if(distance > 0)
-	  distance -= 20;
-	} 
-	else if(event.key == "ArrowUp")
-	{
-		console.log("hello");
-		fireBullet();
-	}	
-
-    upper.style.left = distance + "px";
-    bullet.style.left = distance + "px";
-    bullet.style.top = "220px";
-    bullet.style.display = "none";
-}
-
-function moveL(){
-	document.getElementById("missed").style.display = "none";
-	if(distance > 0)
-	distance -= 20;
-    upper.style.left = distance + "px";
-    bullet.style.left = distance + "px";
-    bullet.style.top = "220px";
-    bullet.style.display = "none";
-}
-
-function getOffset(upper) {
-	var _x = 0;
-	var _y = 0;
-	while( upper && !isNaN( upper.offsetLeft ) && !isNaN( upper.offsetTop ) ) {
-	    _x += upper.offsetLeft - upper.scrollLeft;
-	    _y += upper.offsetTop - upper.scrollTop;
-	    upper = upper.offsetParent;
-	}
-	return { top: _y, left: _x };
-}
-	
-function write(){ 
-  var x = getOffset(upper).left;
-  para.innerHTML = distance;
-}
-
-function fireBullet() {
-  if(bulletCount > 0)
-  {   bulletCount--;
-  	  switch(bulletCount+1)
-  	  { case 1 : inventory1.style.display = "none";
-  	    case 2 : inventory2.style.display = "none";
-  	    case 3 : inventory3.style.display = "none";
-  	    case 4 : inventory4.style.display = "none";
-  	    case 5 : inventory5.style.display = "none";
-  	  }
-
-  	  bullet.style.display = "block";
-	  var elem = bullet;  
-	  var pos = 360;
-	  var limit = 80;
-	  var start = 58;
-	  var width = 122;
-	  var id = setInterval(frame, 3);
-	  function frame() 
-	  {
-	    if(pos == 0) {
-	      clearInterval(id);
-	    } else {
-	      pos--; 
-	      elem.style.top = pos + 'px';
-	      coordinates = getOffset(elem);  
-	    }
-	  
-	  	console.log(getOffset(feild5).left);
-	  	console.log(9*start + 4*width + 85);
-	  	console.log(coordinates.left);
-	  	
-	  	if(coordinates.left > start && coordinates.left < start+width && coordinates.top == limit)
-	  	{ clearInterval(id);
-	  	  window.open("About.html", "_self");
-	  	}
-	  	else if(coordinates.left > 3*start + width + 20 && coordinates.left < 3*start + 2*width + 20 && coordinates.top == limit)
-	  	{ clearInterval(id);
-	  	  window.open("Experience.html", "_self");	
-	  	}
-	  	else if(coordinates.left > 5*start + 2*width + 40 && coordinates.left < 5*start + 3*width + 40 && coordinates.top == limit)
-	  	{ clearInterval(id);
-	  	  window.open("Education.html", "_self");
-	  	}
-	  	else if(coordinates.left > 7*start + 3*width + 65  && coordinates.left < 7*start + 4*width + 70 && coordinates.top == limit)
-	  	{ clearInterval(id);
-	  	  window.open("Skills.html", "_self");
-	  	}
-	  	else if(coordinates.left > 9*start + 4*width + 85 && coordinates.left < 9*start + 5*width + 85 && coordinates.top == limit)
-	  	{ clearInterval(id);;
-	  	  window.open("Contact.html", "_self");
-	  	}
-	  	else if(coordinates.top == 0)
-	  	{ document.getElementById("missed").style.display = "inline-block";
-
-	  	}
-	  }
-  }
-  else
-  { alert("Out of Bullets! Please Reload!");
-  }
-
-  insertBullet()
-  {
-  }
-}
-</script>
-
 </body>
 </html>
