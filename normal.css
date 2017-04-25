@@ -264,15 +264,16 @@ fieldset{
 	.main{
 		flex-direction: column;
 		justify-content: center;
-		height: 2200px;
-		width: 80%;
+		align-items: center;
+		height: 2050px;
+		width: 100%;
 	}
 
 	.one, .two, .three, .four{
-		width: 80%;
+		width: 90%;
 	}
 
 	.head{
-		width: 80%;
+		width: 100%;
 	}
 }
