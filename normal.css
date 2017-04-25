@@ -267,6 +267,8 @@ fieldset{
 		align-items: center;
 		height: 2050px;
 		width: 100%;
+		background-color: yellow;
+
 	}
 
 	.one, .two, .three, .four{
