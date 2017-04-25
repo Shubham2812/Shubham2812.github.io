@@ -265,14 +265,12 @@ fieldset{
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 2050px;
+		height: 2100px;
 		width: 100%;
-		background-color: yellow;
-
 	}
 
 	.one, .two, .three, .four{
-		width: 90%;
+		width: 85%;
 	}
 
 	.head{
