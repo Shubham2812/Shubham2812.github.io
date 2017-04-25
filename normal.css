@@ -267,6 +267,7 @@ fieldset{
 		align-items: center;
 		height: 2100px;
 		width: 100%;
+		padding-top: 50px;
 	}
 
 	.one, .two, .three, .four{
@@ -275,5 +276,9 @@ fieldset{
 
 	.head{
 		width: 100%;
+	}
+
+	.two > img, .education, .passion, .projects, .contact{
+		margin-top: 30px;
 	}
 }
