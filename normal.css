@@ -259,7 +259,7 @@ fieldset{
 	border-radius: 50%;
 }
 
-@media(max-width: 320px)
+@media(max-width: 420px)
 {
 	.main{
 		flex-direction: column;
