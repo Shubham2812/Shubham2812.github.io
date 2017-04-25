@@ -258,3 +258,21 @@ fieldset{
 .movies{
 	border-radius: 50%;
 }
+
+@media(max-width: 320px)
+{
+	.main{
+		flex-direction: column;
+		justify-content: center;
+		height: 2200px;
+		width: 80%;
+	}
+
+	.one, .two, .three, .four{
+		width: 80%;
+	}
+
+	.head{
+		width: 80%;
+	}
+}
