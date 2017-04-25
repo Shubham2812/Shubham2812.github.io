@@ -266,7 +266,7 @@ fieldset{
 		justify-content: center;
 		align-items: center;
 		height: 2200px;
-		width: 100%;
+		width: 95%;
 		padding-top: 50px;
 	}
 
@@ -275,7 +275,7 @@ fieldset{
 	}
 
 	.head{
-		width: 100%;
+		width: 95%;
 	}
 
 	.two > img, .education, .passion, .projects, .contact{
