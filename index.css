@@ -64,7 +64,27 @@
 	{
 		.main{
 			flex-direction: column;
-			height: 1500px;
+			height: 800px;
+			background-color: grey;
+		}
+
+		.interactive, .normal{
+			height: 200px;
+			width: 200px;
+			border-radius: 10%;
+			border: 1px solid black;
+		}
+
+		#left, #right{
+			height: 200px;
+			width: 200px;
+			border-radius: 10%;
+			opacity: 1;
+		}
+
+		#left_text, #right_text{
+			font-size: 20px;
+			color: white;
 		}
 
 	}

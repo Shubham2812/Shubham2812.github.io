@@ -283,6 +283,10 @@ fieldset{
 	}
 
 	.special_link > a{
-		font-size: 10px;
+		font-size: 11px;
+	}
+
+	.email_value{
+		font-size: 12px;
 	}
 }
