@@ -173,6 +173,7 @@ legend{
 	display: flex;
 	justify-content: space-between;
 	padding: 5px;
+	align-items: center;
 }
 
 .home{
@@ -287,6 +288,7 @@ fieldset{
 	}
 
 	.email_value{
-		font-size: 12px;
+		font-size: 15px;
+		color: #ddddde;
 	}
 }
