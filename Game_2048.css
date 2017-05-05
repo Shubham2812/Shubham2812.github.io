@@ -92,7 +92,9 @@
 			background-color: #cdc1b4;
 			font-size: 60px;
 			text-align: center;
-			padding-top: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			box-sizing: border-box;
 		}
 
@@ -136,20 +138,73 @@
 			color: #776E65;	
 		}
 
-		.left, .right{
+		.container{
+			margin: 0;
+		}
+		
+		.main{
+			width: 90%;
+			height: 420px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+
+		.grid{
 			height: 200px;
-			width: 100px;
+			width: 100%;
+		}
+
+		.game{
+			height: 200px;
+			width: 70%;
+		}
+
+		.left, .right{
+			height: 150px;
+			width: 50px;
 		}
 
 		.left > div > div, .right > div > div{
 			display: flex;
 			justify-content: center;
+			font-size: 12px;
 		}
 
 		.up, .down{
-			height: 100px;
+			height: 50px;
 			width: 200px;
 			margin: auto;
 		}
+
+		.up{
+			margin-top: 10px;
+		}
+
+		.element{
+			font-size: 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.game_container{
+			display: flex;
+			height: 200px;
+			align-items: center;
+		}
+
+		.title_left{
+			font-size: 25px;
+		}
+
+		.lower > span, .instructions, #newGame{
+			font-size: 13px;
+		}
+
+		.header{
+			padding: 5px;
+		}
+
 
 }
