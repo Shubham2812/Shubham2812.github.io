@@ -7,6 +7,10 @@ function main()
 { 
 	begin();
 	document.addEventListener('keydown', move);
+	$(".left").click(moveLeft);
+	$(".right").click(moveRight);
+	$(".up").click(moveUp);
+	$(".down").click(moveDown);
 	$("#newGame").click(begin);
 }
 

@@ -37,7 +37,7 @@
 			align-items: center;
 		}
 
-		.left{
+		.title_left{
 			font-size: 40px;
 			color: #776E65;
 		}
@@ -117,3 +117,39 @@
 			cursor: pointer;
 			color: black;
 		}
+
+		.left, .right, .up, .down{ 
+			display: none;
+		}
+
+
+@media(max-width: 720px)
+{
+		.left, .right, .up, .down{ 
+			display: inline-block;
+			padding: 5px;
+			border-radius: 60%;
+			border: 1px dashed grey;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #776E65;	
+		}
+
+		.left, .right{
+			height: 200px;
+			width: 100px;
+		}
+
+		.left > div > div, .right > div > div{
+			display: flex;
+			justify-content: center;
+		}
+
+		.up, .down{
+			height: 100px;
+			width: 200px;
+			margin: auto;
+		}
+
+}
