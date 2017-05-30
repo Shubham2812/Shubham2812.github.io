@@ -54,14 +54,14 @@ function main(){
 	 var rocket1_src = "images/rocket1.png";
 	 var rocket2_src = "images/rocket2.png";
 	 var rocket3_src = "images/rocket3.png";
-	 var rocket4_src = "images/rocket4.jpg";
-	 var rocket5_src = "images/rocket5.jpg";
+	 var rocket4_src = "images/rocket4.png";
+	 var rocket5_src = "images/rocket5.png";
 
-	 var bullet1_src = "images/bullet1.jpg";
-	 var bullet2_src = "images/bullet2.jpg";
+	 var bullet1_src = "images/bullet1.png";
+	 var bullet2_src = "images/bullet2.png";
 	 var bullet3_src = "images/bullet3.png";
 	 var bullet4_src = "images/bullet4.png";
-	 var bullet5_src = "images/bullet5.jpg";
+	 var bullet5_src = "images/bullet5.png";
 
 	 function changeRocket1()
 	 { 	upper.src = rocket1_src;
@@ -84,7 +84,7 @@ function main(){
 	 }
 
 	 function changeBullet1()
-	 { bullet.src = "images/bullet1.jpg"
+	 { bullet.src = "images/bullet1.png"
 	   inventory1.src = bullet1_src;
 	   inventory2.src = bullet1_src;
 	   inventory3.src = bullet1_src;
@@ -93,7 +93,7 @@ function main(){
 	 }
 
 	 function changeBullet2()
-	 { bullet.src = "images/bullet2.jpg";
+	 { bullet.src = "images/bullet2.png";
 	   inventory1.src = bullet2_src;
 	   inventory2.src = bullet2_src;
 	   inventory3.src = bullet2_src;
@@ -120,7 +120,7 @@ function main(){
 	 }
 
 	 function changeBullet5()
-	 { bullet.src = "images/bullet5.jpg";
+	 { bullet.src = "images/bullet5.png";
 	   inventory1.src = bullet5_src;
 	   inventory2.src = bullet5_src;
 	   inventory3.src = bullet5_src;

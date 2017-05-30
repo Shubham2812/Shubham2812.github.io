@@ -5,14 +5,30 @@
 	<style type="text/css">
 		.main{
 			background-color: cyan;
-			border: 1px solid black;
+			border: 1px solid blue;
 			border-radius: 60%;
-			height: 530px;
 			padding: 40px;
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
 			flex-direction: column;
+		}
+
+		.projects{
+			display: flex;
+			justify-content: space-between;
+			width: 600px;
+		}
+
+		.projects > div > a{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.projects > div > a > img{
+			height: 150px;
+			width: 150px;
 		}
 
 		img{
@@ -30,14 +46,15 @@
 		}
 
 		.center{
-			height: 400px; 
-			width: 600px;
-			border: 1px solid grey;
+			width: 60%;
+			border: 1px solid cyan;
 			background-color: white;
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
 			flex-direction: column;
+			margin-top: 10px;
+			border-radius: 20%;
 		}
 
 		.text{
@@ -49,18 +66,8 @@
 		}
 
 		.text1, .text2{
-			font-size: 25px;
+			font-size: 18px;
 			color: brown;
-		}
-
-		#game_2048{
-			height: 240px;
-			width: 140px;
-		}
-
-		#airHockey{
-			height: 250px;
-			width: 350px;
 		}
 
 		.games{
@@ -74,10 +81,15 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			height: 300px;
-			border: 1px solid grey;
-			padding: 10px;
+			height: 200px;
+			padding: 5px;
 		}
+
+		.holder1 > a > img, .holder2 > a >img{
+			height: 160px;
+			width: 100%;
+		}
+
 
 		.holder1{
 			width: 30%;
@@ -87,11 +99,22 @@
 			width: 60%;
 		}
 
+		h1{
+			color: blue;
+		}
+
 	</style>
 </head>
 <body>
 	<div class="main">
-		<h1> Projects </h1>
+		<h1> PROJECTS </h1>
+		<div class="projects">
+			<div> <a href="https://github.com/Shubham2812/Xplorex"> <img src="images/xplorex.png"> <span> Xplorex </span> </a> </div>
+
+			<div> <a href="https://github.com/Shubham2812/SplitTrip"> <img src="images/splittrip.png"> <span> SplitTrip </span> </a> </div>
+
+			<div> <a href="https://github.com/Shubham2812/CVMaker"> <img src="images/cvmaker.png"> <span> CVmaker </span> </a> </div>			
+		</div>
 		<div class="center">
 			<div class="text">
 				<div class="text1"> Getting Bored? </div>
@@ -100,17 +123,17 @@
 			<div class="games">
 				<div class="holder1">
 					<span> 2048 </span>
-					<a href="Game_2048.html"><img id="game_2048" src="https://www.dropbox.com/s/zx4qpzac1rbswei/Game_2048.png?dl=1"></a>
+					<a href="Game_2048.html"><img id="game_2048" src="images/game_2048.png"></a>
 				</div>
 				<div class="holder2">
 					<span> Air Hockey </span>
-					<a href="Game_AirHockey.html"><img id="airHockey" src="https://www.dropbox.com/s/iwcvbgydcurr7lf/AirHockey.png?dl=1"></a>
+					<a href="Game_AirHockey.html"><img id="airHockey" src="images/air_hockey.png"></a>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div>
-		<a href="interactive.html"> Go Back </a>
+		<a href="interactive.html" style="font-size: 30px;"> Go Back </a>
 	</div>
 </body>
 </html>

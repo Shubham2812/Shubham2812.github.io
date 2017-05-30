@@ -5,12 +5,12 @@
 	<style type="text/css">
 		.main{
 			background-color: pink;
-			border: 1px solid black;
+			border: 1px solid brown;
 			border-radius: 60%;
 			height: 530px;
 			padding: 40px;
 			display: flex;
-			justify-content: space-around;
+			justify-content: center;
 			align-items: center;
 			flex-direction: column;
 		}
@@ -29,22 +29,79 @@
 			color: red;
 		}
 
+			.footer{
+				width: 80%;
+				background-color: #322514;
+				color: white;
+				padding: 20px;
+				margin-top: 30px;
+				border-radius: 2%;
+			}
+
+			.footer_contact{
+				width: 70%;
+			}
+
+
+			.footer_contact > div{
+				width: 70%;
+			}
+
+			.footer_contact > div > p{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				font-size: 18px;
+			}
+
+			.footer_upper{
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+
+			.footer_time, .footer_contact{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.footer_map > img{
+				height: 200px; 
+				width: 400px;"
+			}
+
+			.icon{
+				height: 50px;
+				width: 50px;
+			}
+
+			h1{
+				color: brown;
+			}
+
 	</style>
 </head>
 <body>
 	<div class="main">
-		<h1> Contact Details </h1>
-		<p>
-		<div style="display: flex; flex-direction: column; justify-content: space-around; height: 200px; width: 700px; border: 1px solid red; padding: 20px;">
-			<div style="display: flex; justify-content: space-between;"> <span style="font-size: 20px;"> Phone </span> <span style="font-size: 25px;"> 9711301266 </span> </div>
-			<div style="display: flex; justify-content: space-between;"> <span style="font-size: 20px;"> Address </span> <span style="font-size: 25px;"> 3-E, Kamla Nagar, Delhi-110007 </span> </div>
-			<div style="display: flex; justify-content: space-between;"> <span style="font-size: 20px;"> City </span> <span style="font-size: 25px;"> Delhi </span> </div>
-			<div style="display: flex; justify-content: space-between;"> <span style="font-size: 20px;"> E-Mail </span> <span style="font-size: 25px;"> shubham.aggarwal.1996@gmail.com </span> </div>
+		<h1> CONTACT </h1>
+		<div class="footer">
+		  <div class="footer_upper">
+		    <div class="footer_contact">
+		        <div>   
+		            <p><img src="images/location.png" class="icon"> Home : 3-E, Kamla Nagar, Delhi - 110007 </p>
+		            <p><img src="images/phone.png" class="icon"> Phone : 9711301266 </p> 
+		            <p><img src="images/mail.png" class="icon"> Email :  shubham.aggarwal.1996@gmail.com </p>
+		        </div>
+		    </div>  
+		    <div class="footer_map">
+		      <img src="images/map_kamla_nagar.png">
+		    </div>
+		  </div>
 		</div>
-		</p>
 	</div>
 	<div>
-		<a href="interactive.html"> Go Back </a>
+		<a href="interactive.html" style="font-size: 30px;"> Go Back </a>
 	</div>
 </body>
 </html>

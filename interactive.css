@@ -3,6 +3,11 @@
 			padding: 0px;
 		}
 
+		body{
+			background-image: url(images/sky.png);
+			background-repeat: no-repeat;
+		}
+
 		#upper{
 			position: absolute;
 			left: 600px;
