@@ -38,7 +38,7 @@
 
 		a{
 			text-decoration: none;
-			color: orange;
+			color: #43054e;
 		}
 
 		a:hover{
@@ -46,15 +46,15 @@
 		}
 
 		.center{
-			width: 60%;
-			border: 1px solid cyan;
+			width: 90%;
+			border: 1px solid grey;
 			background-color: white;
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
 			flex-direction: column;
 			margin-top: 10px;
-			border-radius: 20%;
+			padding: 10px;
 		}
 
 		.text{
@@ -77,26 +77,33 @@
 			align-items: center;
 		}
 
-		.holder1, .holder2{
+		.holder1, .holder2, .holder3{
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			height: 200px;
 			padding: 5px;
+			font-size: 20px;
+			color: #7b0d8e;
 		}
 
-		.holder1 > a > img, .holder2 > a >img{
+		.holder1 > a > img, .holder2 > a >img, .holder3 > a > img{
 			height: 160px;
 			width: 100%;
 		}
 
 
 		.holder1{
-			width: 30%;
+			width: 40%;
 		}
 
 		.holder2{
-			width: 60%;
+			width: 20%;
+		}
+
+		.holder3{
+			width: 35%;
+			margin-left: 10px;
 		}
 
 		h1{
@@ -122,12 +129,16 @@
 			</div>
 			<div class="games">
 				<div class="holder1">
+					<span> Air Hockey </span>
+					<a href="air-hockey.html"><img id="airHockey" src="images/air_hockey.png"></a>
+				</div>
+				<div class="holder2">
 					<span> 2048 </span>
 					<a href="Game_2048.html"><img id="game_2048" src="images/game_2048.png"></a>
 				</div>
-				<div class="holder2">
-					<span> Air Hockey </span>
-					<a href="Game_AirHockey.html"><img id="airHockey" src="images/air_hockey.png"></a>
+				<div class="holder3">
+					<span> Tic Tac Toe </span>
+					<a href="tic-tac-toe.html"><img id="tic-tac-toe" src="images/tic-tac-toe.png"></a>
 				</div>
 			</div>
 		</div>

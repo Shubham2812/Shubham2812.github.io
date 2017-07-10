@@ -68,11 +68,12 @@
 		}
 
 		.right{
-			height: 260px;
+			height: 280px;
 			width: 80%;
 			border: 1px solid red;
 			background-color: white;
 			padding: 20px;
+			padding-top: 0px;
 		}
 
 		#primary_school:hover, #secondary_school:hover, #college:hover{
@@ -105,6 +106,7 @@
 				<p id="content3" style="font-size: 20px; color: blue;"></p>
 				<p id="content4" style="font-size: 20px; color: blue;"></p>
 				<p id="content5" style="font-size: 20px; color: blue;"></p>
+				<p id="content6" style="font-size: 20px; color: blue;"></p>
 			</div>
 		</div>
 		<div class="links">
@@ -125,6 +127,7 @@
 		var p3 = document.getElementById("content3");
 		var p4 = document.getElementById("content4");
 		var p5 = document.getElementById("content5");
+		var p6 = document.getElementById("content6");
 
 		primary_school.addEventListener("click", func1);
 		secondary_school.addEventListener("click", func2);
@@ -157,7 +160,8 @@
 		  p2.innerHTML = "<span style='color:#3385ff'> Course: </span> B.Tech";
 		  p3.innerHTML = "<span style='color:#3385ff'> Branch: </span> Information Technology"
 		  p4.innerHTML = "<span style='color:#3385ff'> Graduation Year: </span> 2019"
-		  p5.innerHTML = "<span style='color:#3385ff'> Year: </span> 2nd"
+		  p5.innerHTML = "<span style='color:#3385ff'> Year: </span> 3rd"
+		  p6.innerHTML = "<span style='color:#3385ff'> CGPA: </span> 7.77 (Sem I, II, III and IV)"
 		  primary_school.style.backgroundColor = "white"
 		  secondary_school.style.backgroundColor = "white"
 		  college.style.backgroundColor = "orange"

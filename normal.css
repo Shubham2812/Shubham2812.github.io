@@ -47,8 +47,21 @@
 	background-color: #232328;
 	display: flex;
 	justify-content: space-around;
-	padding: 10px;	
-	height: 490px;  	
+	padding-top: 20px;
+}
+
+.main_right, .main_left{
+	width: 48%;
+}
+
+.main_right{
+	display: flex;
+	justify-content: space-between;
+}
+
+.main_left_upper{
+	display: flex;
+	justify-content: space-between;
 }
 
 section{
@@ -58,15 +71,25 @@ section{
 	padding: 5px;
 }
 
-.one, .four{
-	width: 25%;
+.one{
+	width: 55%;
 }
 
-.two, .three{
-	width: 20%;
+.two{
+	width: 38%;
 	margin-top: 50px;
 }
-.biography_head, .education_head, .skills_head, .abilities_head, .contact_head, .projects_head, .passion_head{
+
+.three{
+	width: 43%;
+	margin-top: 50px;
+}
+
+.four{
+	width: 50%;
+}
+
+.biography_head, .education_head, .internship_head, .skills_head, .abilities_head, .contact_head, .projects_head, .passion_head, .links_head{
 	display: flex;
 	align-items: center;
 	border-bottom: 2px solid white;
@@ -79,18 +102,18 @@ section{
 	justify-content: space-between;
 }
 
-.biography_head > img, .education_head > img, .skills_head > img, .abilities_head > img, .contact_head > img, .projects_head > img, .passion_head > img{
+.biography_head > img, .education_head > img, .internship_head > img, .skills_head > img, .abilities_head > img, .contact_head > img, .projects_head > img, .passion_head > img, .links_head > img{
 	height: 40px;
 	width: 40px;
 }
 
-.biography_head > span, .education_head > span, .skills_head > span, .abilities_head > span, .contact_head > span, .projects_head > span, .passion_head > span{
+.biography_head > span, .education_head > span, .internship_head > span, .skills_head > span, .abilities_head > span, .contact_head > span, .projects_head > span, .passion_head > span, .links_head > span{
 	font-size: 20px;
 	color: white;
 	margin-left: 10px;
 }
 
-.biography_content, .education_content, .skills_content. .contact_content{
+.biography_content, .education_content, .internship_content, .skills_content. .contact_content, .links_content{
 	display: flex;
 	flex-direction: column;
 }
@@ -102,18 +125,80 @@ section{
 }
 
 .skills_content > div > div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+}
+
+
+.skills_content > div > div > div{
 	height: 70px;
 	width: 70px;
 	border-radius: 50%;
 	background-color: white;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-.skills_content > div > div >img{
-	height: 50px;
-	width: 50px;
+.skills_content > div > div > div >img{
+	height: 70%;
+	width: 70%;
+}
+
+.special_image{
+	height: 80% !important;
+	width: 80% !important;
+	border-radius: 50% !important;
+}
+
+.links_content > div{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+.links_content > div > img{
+	height: 30px;
+	width: 30px;
+}
+
+.links_value{
+	font-size: 13px;
+}
+
+.links_value_special{
+	font-size: 11px;
+}
+
+.links_value_special2{
+	font-size: 15px;
+}
+
+.links_value > a, .links_value_special > a, .links_value_special2 > a{
+	color: #7b7c7f;
+	text-decoration: none;
+}
+
+.education_value > a{
+	color: #ddddde;
+	text-decoration: none;
+}
+
+.links_value > a:hover, .links_value_special > a:hover, .links_value_special2 > a:hover, .education_value > a:hover{
+	color: white;
+}
+
+.internship_content{
+	display: flex;
+	justify-content: space-between;
+}
+
+.internship_content > fieldset{
+	width: 47%;
 }
 
 .biography, .education{
@@ -164,6 +249,30 @@ legend{
 }
 
 .abilities_coding > div > div{
+	background-color: #eabe24;
+	width: 30%;
+	height: 5px;
+}
+
+.abilities_dbms > div > div{
+	background-color: #eabe24;
+	width: 80%;
+	height: 5px;
+}
+
+.abilities_os > div > div{
+	background-color: #eabe24;
+	width: 70%;
+	height: 5px;
+}
+
+.abilities_frameworks > div > div{
+	background-color: #eabe24;
+	width: 40%;
+	height: 5px;
+}
+
+.abilities_scripting > div > div{
 	background-color: #eabe24;
 	width: 30%;
 	height: 5px;
@@ -242,6 +351,10 @@ fieldset{
 	height: 70px;
 }
 
+.passion_content > div > span{
+	color: #ddddde;
+}
+
 .swimming, .movies, .food{
 	height: 30px;
 	width: 30px;
@@ -260,27 +373,61 @@ fieldset{
 	border-radius: 50%;
 }
 
+#computer{
+	height: 100px;
+	width: 250px;
+	align-self: center;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+    background-color: #232328;
+}
+
 @media(max-width: 720px)
 {
 	.main{
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 2200px;
-		width: 95%;
+		/*height: 2200px;
+		width: 95%;*/
 		padding-top: 50px;
 	}
 
-	.one, .two, .three, .four{
-		width: 85%;
+	.main_left, .main_right{
+		width: 95%;
+		margin: auto;
 	}
 
-	.head{
+	.main_right{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.main_left_upper, .internship_content{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.internship_content > fieldset{
+		width: 90%;
+	}
+
+	#computer{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		width: 95%;
+		height: 200px;
+	}
+
+	.one, .two, .three, .four{
 		width: 95%;
 	}
 
-	.two > img, .education, .passion, .projects, .contact{
-		margin-top: 30px;
+	
+	.head{
+		width: 95%;
 	}
 
 	.special_link > a{
