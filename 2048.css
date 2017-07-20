@@ -1,0 +1,213 @@
+
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+		}
+
+		body{
+			background-color: #faf8ef
+		}
+
+		.container{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			margin: 20px;
+		}
+
+		.main{
+			display: flex;
+			width: 40%;
+			flex-direction: column;
+		}
+
+		.header{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 10px;
+			border: 1px solid black;
+		}
+
+		.upper{
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.title_left{
+			font-size: 40px;
+			color: #776E65;
+		}
+
+		.score{
+			display: flex;
+			flex-direction: column;
+			background-color: grey;
+			padding: 5px;
+			border-radius: 4%;
+			background-color: #bbada0;
+			width: 50px;
+		}
+
+		#scoreText{
+			color: #eee4da;
+			font-size: 10px;
+			text-align: center;
+		}
+
+		.lower{
+			color: #776E65;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.game{
+			height: 450px;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		.grid{
+			height: 400px;
+			width: 400px;
+			box-sizing: border-box;
+			border: 6px solid #bbada0;
+			border-radius: 1%;
+		}
+
+		.row{
+			height: 25%;
+			box-sizing: border-box;
+			display: flex;
+		}
+
+		.element{
+			height: 100%;
+			width: 25%;
+			border: 3px solid #bbada0;
+			background-color: #cdc1b4;
+			font-size: 60px;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			box-sizing: border-box;
+		}
+
+		.instructions{
+			padding: 5px;
+			color: #776E65;
+			border-bottom: 1px solid #bbada0;
+		}
+
+		.footer{
+			color: #776E65;
+			padding: 5px;
+			text-align: center;
+		}
+
+		#points{
+			text-align: center;
+			color: white;
+		}
+
+		#newGame:hover{
+			cursor: pointer;
+			color: black;
+		}
+
+		.left, .right, .up, .down{ 
+			display: none;
+		}
+
+
+@media(max-width: 720px)
+{
+		.left, .right, .up, .down{ 
+			display: inline-block;
+			padding: 5px;
+			border-radius: 60%;
+			border: 1px dashed grey;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #776E65;	
+		}
+
+		.container{
+			margin: 0;
+		}
+
+		.main{
+			width: 90%;
+			height: 420px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+
+		.grid{
+			height: 200px;
+			width: 100%;
+			border: 4px solid #bbada0;
+		}
+
+		.game{
+			height: 200px;
+			width: 60%;
+		}
+
+		.left, .right{
+			height: 150px;
+			width: 40px;
+		}
+
+		.left > div > div, .right > div > div{
+			display: flex;
+			justify-content: center;
+			font-size: 12px;
+		}
+
+		.up, .down{
+			height: 50px;
+			width: 200px;
+			margin: auto;
+		}
+
+		.up{
+			margin-top: 10px;
+		}
+
+		.element{
+			font-size: 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 2px solid #bbada0;
+		}
+
+		.game_container{
+			display: flex;
+			height: 200px;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.title_left{
+			font-size: 25px;
+		}
+
+		.lower > span, .instructions, #newGame{
+			font-size: 13px;
+		}
+
+		.header{
+			padding: 5px;
+		}
+
+
+}
