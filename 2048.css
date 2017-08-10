@@ -6,7 +6,7 @@
 		}
 
 		body{
-			background-color: #faf8ef
+			background-color: #faf8ef;
 		}
 
 		.container{
@@ -42,7 +42,11 @@
 			color: #776E65;
 		}
 
-		.score{
+		.score_container{
+			display: flex;
+		}
+
+		.score, .best{
 			display: flex;
 			flex-direction: column;
 			background-color: grey;
@@ -50,6 +54,10 @@
 			border-radius: 4%;
 			background-color: #bbada0;
 			width: 50px;
+		}
+
+		.best{
+			margin-right: 10px;
 		}
 
 		#scoreText{
@@ -110,7 +118,7 @@
 			text-align: center;
 		}
 
-		#points{
+		#points, #maximum{
 			text-align: center;
 			color: white;
 		}
@@ -122,6 +130,71 @@
 
 		.left, .right, .up, .down{ 
 			display: none;
+		}
+
+		#gameOver{
+			z-index: 900;
+		    display: none; 
+		    position: absolute;
+		    background-color: white;
+		    opacity: 0.6;
+		    height: 400px;
+		    width: 400px;
+		}
+
+		#gameOver > div{
+			margin: auto;
+			display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    flex-direction: column;
+		    margin-top: 145px;
+		}
+
+		#gameWon{
+		    z-index: 900;
+		    display: none; 
+		    position: absolute;
+		    background-color: white;
+		    opacity: 0.6;
+		    height: 400px;
+		    width: 400px;
+		}
+
+		#gameWon > div{
+			margin: auto;
+			display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    flex-direction: column;
+		    margin-top: 145px;
+		}
+
+		.options{
+			display: flex;
+		}
+
+		.message{
+			font-size: 60px;
+		    font-weight: bold;
+		    height: 60px;
+		    line-height: 60px;
+		}
+
+		.reset, .continue{
+		    background: #8f7a66;
+		    border-radius: 3px;
+		    padding: 0 20px;
+		    text-decoration: none;
+		    color: #f9f6f2;
+		    height: 40px;
+		    line-height: 42px;
+		    margin-left: 9px;
+		}
+
+		.reset:hover, .newGame:hover, .continue:hover{
+			cursor: pointer;
+			color: black;
 		}
 
 
@@ -207,6 +280,27 @@
 
 		.header{
 			padding: 5px;
+		}
+
+		.options{
+			flex-direction: column;
+		}
+
+		#gameWon, #gameOver{
+			width: 54%;
+		}
+
+		#gameWon > div, #gameOver > div {
+			margin-top: 120px;
+		}
+
+		.reset, .continue{
+			margin-left: 0;
+			margin-top: 10px;
+		}
+
+		.message{
+			font-size: 34px;
 		}
 
 

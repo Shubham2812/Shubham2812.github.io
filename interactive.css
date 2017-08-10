@@ -52,7 +52,7 @@
 
 		#reload{
 			height: 50px; 
-			width: 100px;
+			width: 110px;
 		}
 
 		#missed{
@@ -138,4 +138,13 @@
 
 		#inventory1{
 			margin-right: 5px;
+		}
+
+		#bottomL:hover, #bottomR:hover, #reload:hover, #fire:hover{
+			cursor: pointer;
+		} 
+
+		.rockets > img:hover, .bullets > img:hover{
+			cursor: pointer;
+			transform: scale(1.2);
 		}

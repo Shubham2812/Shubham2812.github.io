@@ -17,11 +17,14 @@
 			<div class="header">
 				<div class="upper">
 					<div class="title_left"> 2048 </div>
-					<div class="score"> <span id="scoreText"> Score </span> <span id="points"> 0 </span></div>
+					<div class="score_container">
+						<div class="best"> <span id="scoreText"> Best </span> <span id="maximum"> 0 </span></div>
+						<div class="score"> <span id="scoreText"> Score </span> <span id="points"> 0 </span></div>
+					</div>
 				</div>
 				<div class="lower">
 					<span> Join the numbers and get to the <strong> 2048 tile! </strong> </span>
-					<div id="newGame"> New Game </div>
+					<div class="newGame"> New Game </div>
 				</div>
 			</div>
 			<div class="game_container">
@@ -58,6 +61,21 @@
 							<div class="element" id="pos31"> </div>
 							<div class="element" id="pos32"> </div>
 							<div class="element" id="pos33"> </div>
+						</div>
+					</div>
+					<div id="gameOver">
+						<div>
+							<div class="message"> Game Over! </div>
+							<div class="reset"> New Game </div>
+						</div>
+					</div>
+					<div id="gameWon">
+						<div>
+							<div class="message"> You WON! </div>
+							<div class="options">
+								<div class="reset"> New Game </div>
+								<div class="continue"> Keep Playing </div>
+							</div>
 						</div>
 					</div>
 				</div>
