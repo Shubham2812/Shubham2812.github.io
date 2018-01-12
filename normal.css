@@ -197,9 +197,31 @@ section{
 	justify-content: space-between;
 }
 
-.internship_content > fieldset{
+.internship_info{
+	width: 47%;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.internship_role{
 	width: 47%;
 }
+
+.internship_info > div{
+	display: flex;
+	justify-content: space-between;
+}
+
+.internship_partition{
+	border-left: 1px solid threedface;
+	margin-left: 5px;
+	margin-right: 15px;
+}
+
+/*.internship_content > fieldset{
+	width: 47%;
+}*/
 
 .biography, .education{
 }
@@ -210,6 +232,7 @@ section{
 
 .value, .email_value{
 	color: #ddddde; /* #7b7c7f */
+	font-size: 15px;
 }
 
 .special_field{
@@ -312,10 +335,15 @@ a:hover{
 	color: #ddddde;
 }
 
-.education_school > div, .education_college > div{
+.education_school > div{
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 5px;	
+}
+
+.education_college > div{
+	display: flex;
+	justify-content: space-between;
 }
 
 fieldset{
@@ -437,5 +465,26 @@ fieldset{
 	.email_value{
 		font-size: 15px;
 		color: #ddddde;
+	}
+
+	.education_college > div{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.internship_info, .internship_role{
+		width: 95%;
+	}
+
+	.internship_role{
+		margin-left: 15px;
+	}
+
+	.internship_partition{
+		border-top: 1px solid threedface;
+		margin: 0;
+		margin-top: 5px;
+		margin-bottom: 5px;
 	}
 }
